@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Just Clean Laundry Service (JCL) is Akure's premium pickup-and-delivery laundry and dry cleaning brand. Hotel-grade garment care, delivered on-time.">
+  <title>JCL - Just Clean Laundry Service | Cleanliness you can always trust</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- 1. TOP BAR -->
+  <div class="top-bar" id="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-info">
+        <div class="top-bar-item">
+          <!-- Clock Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span>Mon - Sat: 8:00 AM - 6:00 PM</span>
+        </div>
+        <div class="top-bar-item">
+          <!-- Phone Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.28a1 1 0 01.94.725l.548 2.2a1 1 0 00-.961 1.41l-1.272 1.27a13.518 13.518 0 005.682 5.68l1.272-1.27a1 1 0 011.41.96l2.2.55a1 1 0 01.724.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:07039554792">07039554792</a>
+        </div>
+      </div>
+      <div class="top-bar-socials">
+        <a href="mailto:thejustplace@gmail.com">thejustplace@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. HEADER -->
+  <header class="header" id="home">
+    <div class="container header-content">
+      <a href="#home" class="logo">
+        <img src="assets/logo-full-color.svg" alt="Just Clean Laundry Service Logo">
+      </a>
+      
+      <!-- Hamburger Menu Toggle for Mobile -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Main Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#mission-vision" class="nav-link">Mission & Vision</a>
+        <a href="#location" class="nav-link">Locations</a>
+        <a href="#contact" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- CTA Button in Header -->
+      <div class="nav-cta">
+        <a href="#calculator" class="btn btn-primary btn-sm">Estimate Price</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. HERO & ESTIMATE CALCULATOR -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="hero-tag">Premium Garment Care</span>
+        <h1 class="hero-title">Your Laundry: <span>Collected</span>, Cleaned & <span>Delivered</span></h1>
+        <p class="hero-desc">We're not selling clean clothes — everyone sells clean clothes. We're selling the removed weight of one more thing you don't have to worry about.</p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-val">100%</span>
+            <span class="stat-lbl">Reliability</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val">Akure</span>
+            <span class="stat-lbl">Wide Service</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val">Hotel</span>
+            <span class="stat-lbl">Grade Care</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing Calculator Overlay Card -->
+      <div class="calc-card" id="calculator">
+        <h3 class="calc-title">Cost Calculator</h3>
+        <p class="calc-subtitle">Get an instant price estimate for your laundry order</p>
+        
+        <!-- Rate details -->
+        <div class="calc-group">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span class="calc-label" id="calc-slider-label" style="margin-bottom: 0;">Garment Count</span>
+            <span class="calc-label" style="color: var(--color-brand-blue-alt); font-weight: 700; margin-bottom: 0;">Rate: ₦450 / piece</span>
+          </div>
+          <div class="calc-slider-container">
+            <input type="range" class="calc-slider" id="calc-qty-slider" min="1" max="100" value="10">
+            <span class="calc-count-display" id="calc-count">10 Pieces</span>
+          </div>
+        </div>
+
+        <!-- Delivery Speed Toggle -->
+        <div class="calc-group">
+          <div class="calc-checkbox-group">
+            <div class="checkbox-desc">
+              <span class="checkbox-desc-title">Express Turnaround</span>
+              <span class="checkbox-desc-subtitle">Same-day service (+50% surcharge)</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="express-delivery">
+              <span class="slider-toggle"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Results breakdown display -->
+        <div class="calc-result-box">
+          <div class="result-row">
+            <span class="result-lbl">Laundry Subtotal:</span>
+            <span class="result-val" id="res-subtotal">₦4,500</span>
+          </div>
+          <div class="result-row">
+            <span class="result-lbl">Pickup & Delivery (Akure):</span>
+            <span class="result-val" id="res-delivery">₦1,000</span>
+          </div>
+          <div class="result-row" id="res-express-row">
+            <span class="result-lbl">Express Service Surcharge:</span>
+            <span class="result-val" id="res-express">₦0</span>
+          </div>
+          <div class="result-row">
+            <span class="result-lbl" style="font-weight: 700; color: var(--color-white);">Estimated Total:</span>
+            <span class="result-val-total" id="res-total">₦5,500</span>
+          </div>
+        </div>
+        
+        <!-- Note Inscription -->
+        <p style="font-size: 0.75rem; color: var(--color-text-light); text-align: center; margin-top: -10px; margin-bottom: 20px; font-style: italic; font-weight: 500;">
+          *This is subject to change depending on type of cloth
+        </p>
+<!-- Call to Action Booking via WhatsApp -->
+        <a href="#" target="_blank" class="btn btn-secondary calc-btn" id="calc-book-btn">
+          Book Pickup via WhatsApp
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. ABOUT US SECTION -->
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div class="about-img-box">
+        <div class="about-img-frame">
+          <img src="assets/about-img.jpg" alt="Freshly folded laundry linens and towels representing JCL quality care">
+        </div>
+        <div class="about-badge">
+          <span class="about-badge-num">100%</span>
+          <span class="about-badge-text">Akure-owned<br>& Operated</span>
+        </div>
+      </div>
+      <div class="about-text-content">
+        <span class="section-subtitle">Akure's Trusted Laundromat</span>
+        <h2 class="section-title">Who We Are</h2>
+        <p>Just Clean Laundry Service (JCL) is Akure's pickup-and-delivery laundry and dry cleaning brand — built for people who have better things to do than think about laundry. We exist because "dirty clothes" was never the real problem.</p>
+        <p>The real problem is what happens around the clothes: the pickup that never comes, the shirt that comes back damaged, the provider who goes quiet mid-order.</p>
+        <p>JCL was built to remove that friction entirely — hotel-grade garment care, delivered with the consistency of a brand that takes its own promise seriously. We are not the cheapest option in Akure. We are not trying to be the fanciest. We are the one you stop thinking about because it's just handled.</p>
+        
+        <!-- Key features layout -->
+        <div class="about-features">
+          <div class="about-feat-item">
+            <div class="about-feat-icon">
+              <!-- Shield Check Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="about-feat-title">Hotel-Grade Care</h4>
+              <p class="about-feat-desc">Premium detergents and processes that preserve colors and fabrics.</p>
+            </div>
+          </div>
+          <div class="about-feat-item">
+            <div class="about-feat-icon">
+              <!-- Truck Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 10-4 0 2 2 0 004 0z" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="about-feat-title">Flawless Deliveries</h4>
+              <p class="about-feat-desc">On-time pickup and drop-off, scheduled directly at your convenience.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="#calculator" class="btn btn-primary">Book Your First Order</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. MISSION & VISION SECTION -->
+  <section class="section section-bg-light" id="mission-vision">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Purpose and Direction</span>
+        <h2 class="section-title">Our Mission & Vision</h2>
+        <p class="section-desc">At JCL, we exist to deliver absolute trust and clarity. We do this by keeping our promise clear and keeping your garments immaculate.</p>
+      </div>
+
+      <div class="split-sections-grid">
+        <!-- Mission Card -->
+        <div class="split-card">
+          <div class="split-icon">
+            <!-- Sparkles Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+          </div>
+          <h3 class="split-card-title">Our Mission</h3>
+          <p class="split-card-desc">Give the busiest people back their time — one flawlessly clean, on-time delivery at a time. Every pickup, every clean, and every delivery exists to hand our customers back something more valuable than a clean shirt: their attention, freed up for the life happening around the chores.</p>
+          <ul class="split-list">
+            <li class="split-list-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span>Remove the quiet stress of laundry day entirely.</span>
+            </li>
+            <li class="split-list-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span>Deliver consistency that Akure professionals can rely on.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Vision Card -->
+        <div class="split-card">
+          <div class="split-icon">
+            <!-- Eye Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            </svg>
+          </div>
+          <h3 class="split-card-title">Our Vision</h3>
+          <p class="split-card-desc">To be the laundry service trusted by default — not the cheapest, not the fanciest, the one you never have to think twice about. We aim to redefine garment care services in the Capital Territory through transparent pricing and automated customer care models.</p>
+          <ul class="split-list">
+            <li class="split-list-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span>Become Akure's default choice for outsourced garment care.</span>
+            </li>
+            <li class="split-list-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span>Set the benchmark for customer service and pickup reliability.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Delivery Promise Row -->
+      <div class="split-delivery-row" style="margin-top: 50px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; background-color: var(--color-white); border-radius: 16px; border: 1px solid var(--color-border); padding: 40px; box-shadow: var(--shadow-md);">
+        <div class="delivery-text-col">
+          <span class="section-subtitle" style="margin-bottom: 8px;">The JCL Promise</span>
+          <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 16px; color: var(--color-primary-dark); line-height: 1.25;">Akure's Most Reliable Pickup & Delivery</h3>
+          <p style="color: var(--color-text-light); font-size: 1.05rem; margin-bottom: 20px; line-height: 1.6;">We know that laundry done badly steals your mental space. Our dispatch riders are tracked and scheduled with precision, ensuring we show up exactly when you expect us — no silent periods, no delayed pickups.</p>
+          <div style="display: flex; gap: 16px; align-items: center;">
+            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: var(--color-success);"></div>
+            <span style="font-weight: 600; font-size: 0.95rem; color: var(--color-primary-dark);">Free pickup & delivery on standard orders in Akure</span>
+          </div>
+        </div>
+        <div class="delivery-img-col" style="border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md);">
+          <img src="assets/delivery-img.jpg" alt="JCL Courier delivering clean laundry" style="width: 100%; height: auto; display: block;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. LOCATION SECTION -->
+  <section class="section" id="location">
+    <div class="container location-grid">
+      <div class="location-content-box">
+        <span class="section-subtitle">Our Coverage Area</span>
+        <h2 class="section-title">Where We Serve</h2>
+        <p class="section-desc">Based in Akure, Just Clean Laundry Service delivers straight to your doorstep. We service homes, offices, and commercial establishments across all key districts in the Ondo State.</p>
+        
+        <!-- Service Areas listing cards -->
+        <div class="location-list">
+          <div class="loc-card">
+            <div class="loc-icon">🗺️</div>
+            <span class="loc-name">FUTA</span>
+          </div>
+          <div class="loc-card">
+            <div class="loc-icon">🗺️</div>
+            <span class="loc-name">Alagbaka</span>
+          </div>
+          <div class="loc-card">
+            <div class="loc-icon">🗺️</div>
+            <span class="loc-name">Ijapo Estate</span>
+          </div>
+          <div class="loc-card">
+            <div class="loc-icon">🗺️</div>
+            <span class="loc-name">Oba-Ile</span>
+          </div>
+          <div class="loc-card">
+            <div class="loc-icon">🗺️</div>
+            <span class="loc-name">Ondo Road</span>
+          </div>
+          <div class="loc-card">
+            <div class="loc-icon">🗺️</div>
+            <span class="loc-name">Shagari Estate & Oda Road</span>
+          </div>
+        </div>
+
+        <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 24px;">Don't see your neighborhood listed? Reach out to us. We regularly accommodate custom pickup requests across other areas of Akure for institutional or large orders.</p>
+        <a href="#contact" class="btn btn-outline">Request Custom Location</a>
+      </div>
+
+      <!-- Map Mockup Panel -->
+      <div class="map-mock-box">
+        <div class="map-placeholder">
+          <!-- Fake map roads and landscape elements for luxury aesthetic -->
+          <div class="map-river"></div>
+          <div class="map-road map-road-1"></div>
+          <div class="map-road map-road-2"></div>
+          <div class="map-road map-road-3"></div>
+          
+          <!-- Bouncing map pin -->
+          <div class="map-marker">
+            <div class="map-marker-pin">
+              <div class="map-marker-inner"></div>
+            </div>
+            <div class="map-marker-pulse"></div>
+          </div>
+          
+          <!-- Info box overlay on map -->
+          <div class="map-info-popup">
+            <h4 class="map-info-title">JCL Dispatch Hub</h4>
+            <p class="map-info-text">Akure, Ondo State. Delivering daily pickup and drop-off garment care directly to FUTA, Alagbaka, Ijapo Estate, Oba-Ile, and Ondo Road.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CONTACT US SECTION -->
+  <section class="section section-bg-light" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info-panel">
+        <div class="section-header-left">
+          <span class="section-subtitle">Get in Touch</span>
+          <h2 class="section-title">Contact Us</h2>
+          <p class="section-desc">Have a question or want to discuss a corporate laundry contract? Reach out, and we will get back to you immediately.</p>
+        </div>
+
+        <div class="contact-item-box">
+          <div class="contact-item-icon">
+            <!-- Map Pin Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <div>
+            <h4 class="contact-item-title">Service Location</h4>
+            <p class="contact-item-detail">Futa South Gate, Akure</p>
+          </div>
+        </div>
+
+        <div class="contact-item-box">
+          <div class="contact-item-icon">
+            <!-- Mail Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div>
+            <h4 class="contact-item-title">Email Address</h4>
+            <p class="contact-item-detail"><a href="mailto:thejustplace@gmail.com">thejustplace@gmail.com</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item-box">
+          <div class="contact-item-icon">
+            <!-- Phone/WhatsApp Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div>
+            <h4 class="contact-item-title">Phone & WhatsApp</h4>
+            <p class="contact-item-detail"><a href="tel:07039554792">07039554792</a></p>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!-- Contact Message Form -->
+      <div class="contact-form-card">
+        <h3 class="form-title">Send Us a Message</h3>
+        <p class="form-subtitle">Drop us a line and our brand team will respond immediately.</p>
+        
+        <form id="contact-form">
+          <div class="form-grid">
+            <div class="form-input-container">
+              <input type="text" class="form-input" id="form-name" placeholder="Your Name" required>
+            </div>
+            <div class="form-input-container">
+              <input type="email" class="form-input" id="form-email" placeholder="Your Email Address" required>
+            </div>
+            <div class="form-input-container">
+              <input type="tel" class="form-input" id="form-phone" placeholder="Phone Number" required>
+            </div>
+            <div class="form-input-container">
+              <input type="text" class="form-input" id="form-subject" placeholder="Subject">
+            </div>
+            <div class="form-input-container form-group-full">
+              <textarea class="form-input" id="form-message" placeholder="Type your message here..." required></textarea>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary form-submit-btn">Send Message</button>
+          
+          <!-- Submit Status Notification banner -->
+          <div class="form-status" id="form-status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="footer-logo">
+          <img src="assets/logo-white.svg" alt="Just Clean Laundry Service Logo">
+        </a>
+        <p class="footer-desc">JCL is Akure's reliable pickup-and-delivery laundry and dry cleaning service. We deliver hotel-grade garment care so you can focus on the life happening around you.</p>
+
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li class="footer-link-item"><a href="#home">Home</a></li>
+          <li class="footer-link-item"><a href="#about">About Us</a></li>
+          <li class="footer-link-item"><a href="#mission-vision">Mission & Vision</a></li>
+          <li class="footer-link-item"><a href="#location">Service Areas</a></li>
+          <li class="footer-link-item"><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Our Services</h4>
+        <ul class="footer-links">
+          <li class="footer-link-item"><a href="#calculator">Wash & Fold</a></li>
+          <li class="footer-link-item"><a href="#calculator">Dry Cleaning</a></li>
+          <li class="footer-link-item"><a href="#calculator">Ironing Only</a></li>
+          <li class="footer-link-item"><a href="#calculator">Express Turnaround</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Get in Touch</h4>
+        <div class="footer-contact-info">
+          <div class="footer-contact-item">
+            <!-- Map Pin -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            </svg>
+            <span>Futa South Gate, Akure</span>
+          </div>
+          <div class="footer-contact-item">
+            <!-- Phone -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.28a1 1 0 01.94.725l.548 2.2a1 1 0 00-.961 1.41l-1.272 1.27a13.518 13.518 0 005.682 5.68l1.272-1.27a1 1 0 011.41.96l2.2.55a1 1 0 01.724.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <a href="tel:07039554792">07039554792</a>
+          </div>
+          <div class="footer-contact-item">
+            <!-- Mail -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <a href="mailto:thejustplace@gmail.com">thejustplace@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span class="footer-copyright">&copy; 2026 Just Clean Laundry Service. All rights reserved.</span>
+      <div class="footer-legal-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="index.js"></script>
+</body>
+</html>
