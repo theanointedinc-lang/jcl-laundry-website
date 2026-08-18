@@ -280,12 +280,12 @@ img {
 }
 
 .logo img {
-  height: 64px;
+  height: 80px;
   transition: var(--transition-smooth);
 }
 
 .header.sticky .logo img {
-  height: 52px;
+  height: 60px;
 }
 
 /* Main Navigation */
@@ -1195,7 +1195,7 @@ textarea.form-input {
 }
 
 .footer-logo img {
-  height: 64px;
+  height: 80px;
   margin-bottom: 24px;
 }
 

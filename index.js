@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
       
-      // Simulate Form Submission (API post simulation)
+      // Send real email request using our serverless endpoint
       showStatus('Sending your message... Please wait.', 'loading');
       
       const submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -172,12 +172,30 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
       submitBtn.innerHTML = 'Sending...';
       
-      setTimeout(() => {
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email, phone, subject, message })
+      })
+      .then(response => {
+        if (!response.ok) {
+          return response.json().then(err => { throw new Error(err.error || 'Failed to send'); });
+        }
+        return response.json();
+      })
+      .then(data => {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnText;
-        showStatus(`Thank you, ${name}! Your message has been sent successfully. We will contact you within 24 hours.`, 'success');
+        showStatus(`Thank you, ${name}! Your message has been sent successfully. We will contact you shortly.`, 'success');
         contactForm.reset();
-      }, 1500);
+      })
+      .catch(error => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+        showStatus(`Error: ${error.message || 'Failed to send message.'}`, 'error');
+      });
     });
   }
   
