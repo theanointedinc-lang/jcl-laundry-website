@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. INTERACTIVE PRICING CALCULATOR
   // Pricing Constants (in NGN - ₦)
   const RATE_PER_PIECE = 450;
-  const DELIVERY_CHARGE = 1000;
+  const DELIVERY_CHARGE = 500;
   
   let quantity = 10;
   let isExpress = false;

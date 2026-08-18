@@ -1471,3 +1471,99 @@ textarea.form-input {
     display: none; /* Hide details badge on small screens */
   }
 }
+
+
+/* ==========================================================================
+   JCL PROMISE SECTION (RESPONSIVE GRID)
+   ========================================================================== */
+.split-delivery-row {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-smooth);
+}
+
+.delivery-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--color-primary-dark);
+  line-height: 1.25;
+}
+
+.delivery-desc {
+  color: var(--color-text-light);
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.delivery-badge-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.delivery-badge-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-success);
+}
+
+.delivery-badge-text {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-primary-dark);
+}
+
+.delivery-img-col {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.delivery-img-col img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsiveness for JCL Promise Row */
+@media (max-width: 992px) {
+  .split-delivery-row {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 32px;
+    margin-top: 40px;
+  }
+  
+  .delivery-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .split-delivery-row {
+    padding: 24px 20px;
+    gap: 24px;
+    border-radius: 12px;
+  }
+  
+  .delivery-title {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+  
+  .delivery-desc {
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+}
